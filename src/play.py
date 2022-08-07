@@ -1,3 +1,4 @@
+from curses.panel import new_panel
 from inspect import getsource
 from pathlib import Path
 import glob
@@ -12,7 +13,6 @@ def get_sound_files(cache_dir, ext='mp3'):
 
 mp3_files = get_sound_files(CACHE_DIR, ext='mp3')
 print(mp3_files)
-
 
 player = vlc.MediaListPlayer()
 mediaList = vlc.MediaList(mp3_files)
