@@ -3,7 +3,7 @@ import requests
 from loguru import logger
 
 
-SLACK_HOOK_URL = 'https://hooks.slack.com/services/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'
+SLACK_HOOK_URL = 'https://hooks.slack.com/services/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'
 
 
 def send(text):

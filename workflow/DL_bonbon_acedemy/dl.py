@@ -18,7 +18,7 @@ cnt=0
 def my_hook(d):
     global cnt
     if d['status'] == 'downloading':
-        if (cnt%30 == 0) : 
+        if (cnt%180 == 0) : 
             # logger.info(str(d))
             logger.info(d['filename'])
             db = d['downloaded_bytes']
@@ -26,8 +26,9 @@ def my_hook(d):
             r = db/tb
             s = f'{int(100*r)}%:' + '|'+ int(30*r)*'|' + int(30*(1-r))*'-' + '|'
             logger.info(s)
+            cnt=0
         cnt += 1
-        
+        print(cnt)
 
     if d['status'] == 'finished':
         logger.info('Done downloading, now converting ...')
