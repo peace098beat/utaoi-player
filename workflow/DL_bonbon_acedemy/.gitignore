@@ -1,1 +1,7 @@
 download/
+unplay-datas/
+*.mp4
+*.webp
+*.m4a
+*.mkv
+*.json
